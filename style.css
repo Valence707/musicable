@@ -1,0 +1,94 @@
+body {
+	background: black;
+}
+
+::selection {
+	color: black;
+	background-color: yellow;
+}
+
+#toolBar {
+	position: fixed;
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	bottom: 0;
+	width:100%;
+	height:50px;
+	background-image: linear-gradient(90deg, black, purple, purple, red, purple, purple, black);
+}
+
+#home {
+	color: black;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 900;
+	border: 3px solid black;
+	border-radius: 5px;
+	margin: auto;
+	padding: 3px;
+	transition: background-color 0.15s;
+}
+
+#home:hover {
+	background-color: rgba(255, 255, 0, 0.5);
+}
+
+#titleHeading {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	width: 100%;
+	height: 100px;
+	background-image: linear-gradient(90deg, black, purple, red, purple, black)
+}
+
+#musicableTitle {
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	background-color: linear-gradient(90deg, purple, red, purple);
+	border: 5px solid black;
+	border-radius: 7px;
+	margin-top: 10px;
+	height: 60px;
+	padding: 5px;
+	font-size: 48px;
+	transition: background-color 0.15s;
+}
+
+#musicableTitle:hover {
+	background-color: rgba(255, 255, 0, 0.5);
+}
+
+.paragraphContainer {
+	display: flex;
+	width: 100%;
+	height: auto;
+	justify-content: center;
+}
+
+.bodyParagraph {
+	max-width: 300px;
+	width:100%;
+	justify-content: center;
+	padding: 0px;
+	margin:5px;
+	border: 3px solid purple;
+	border-radius: 7px;
+	transition: background-color 0.15s;
+}
+
+.bodyParagraph h1 {
+	text-align: center;
+	color: white;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	width: min-content;
+	margin: 10px;
+}
+
+.bodyParagraph p {
+	color:white;
+	margin: 10px;
+}
+
+.bodyParagraph:hover {
+	background-color: rgba(100, 100, 255, 0.25);
+}
