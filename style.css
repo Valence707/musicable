@@ -58,11 +58,11 @@ body {
 @keyframes backgroundImageAnimation {
 	0% {
 		margin-top:535px;
-		filter: brightness(0%);
+		filter: opacity(0%);
 		transform: translate(-10px) rotate(5deg);
 	}
 	25% {
-		filter: brightness(100%);
+		filter: opacity(100%);
 		transform: translate(15px) rotate(-5deg);
 	}
 
@@ -71,12 +71,12 @@ body {
 	}
 
 	75% {
-		filter: brightness(100%);
+		filter: opacity(100%);
 		transform: translate(15px) rotate(-5deg);
 	}
 	100% {
 		margin-top:-10px;
-		filter: brightness(0%);
+		filter: opacity(0%);
 		transform: translate(-10px) rotate(5deg);
 	}
 }
@@ -138,7 +138,7 @@ body {
 
 .titleButton h1 {
 	text-align: center;
-	color: white;
+	color: rgba(255, 255, 255, 0.9);
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 	width: auto;
 	margin: 10px;
@@ -157,18 +157,14 @@ body {
 	cursor: pointer;
 }
 
-.titleButton hr {
-	width: 25%;
-	margin-top:-3px;
-	transition: width 0.1s;
-}
-
-.titleButton:hover hr {
-	width: 35%;
-}
-
 .titleButton:hover h1 {
 	font-size: 32px;
+	color: rgba(255, 255, 255, 1);
+}
+
+.titleButton img {
+	width: 30px;
+	margin-left: 45%;
 }
 
 #listenButton {
@@ -292,6 +288,10 @@ body {
 	font-size: 12px;
 	margin-left: auto;
 	margin-right: 10px;
+}
+
+#overlayCloseButton:hover {
+	color: rgba(255, 255, 0, 1);
 }
 
 .overlayParagraph {
