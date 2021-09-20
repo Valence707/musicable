@@ -1,15 +1,23 @@
+function overlayBackgroundOn() {
+  document.getElementById('overlayContainer').style.display = 'block';
+}
+
+function overlayOff() {
+  document.getElementById('overlayContainer').style.display = 'none';
+}
+
 function infoOverlayOn() {
-	document.getElementById("siteInfoOverlayContainer").style.display = "flex";
+  document.getElementById('siteInfoOverlay').style.display = 'block';
+  document.getElementById('siteSettingsOverlay').style.display = 'none';
+  overlayBackgroundOn();
   }
-  
-  function infoOverlayOff() {
-	document.getElementById("siteInfoOverlayContainer").style.display = "none";
-  } 
 
 function settingsOverlayOn() {
-  document.getElementById("siteInfoOverlayContainer").style.display = "flex";
+  document.getElementById("siteSettingsOverlay").style.display = "block";
+  document.getElementById('siteInfoOverlay').style.display = 'none';
+  overlayBackgroundOn();
   }
-  
-  function settingsOverlayOff() {
-  document.getElementById("siteInfoOverlayContainer").style.display = "none";
-  } 
+
+function colorThemeChangeLight() {
+  document.getElementById
+}
