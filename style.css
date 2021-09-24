@@ -3,8 +3,8 @@ body {
 }
 
 ::selection {
-	color: purple;
-	background-color: red;
+	color: orangered;
+	background-color: black;
 }
 
 #background {
@@ -16,7 +16,7 @@ body {
 	flex-flow: column;
 }
 
-.backgroundDecorationContainer {
+#backgroundDecorationContainer {
 	display: flex;
 	justify-content: space-around;
 	flex-flow: row nowrap;
@@ -24,35 +24,36 @@ body {
 	height: 300px;
 }
 
-.backgroundDecorationContainer img {
-	filter: brightness(0%);
+.animatedBackgroundImage {
+	filter: opacity(0%);
 	width: 5%;
 	margin: auto -10px auto -10px;
 	opacity: 0.25;
-}
-
-.backgroundAnimation1 {
 	animation: backgroundImageAnimation 6s ease-in-out infinite;
 }
 
+.backgroundAnimation1 {
+	animation-delay: 0s;
+}
+
 .backgroundAnimation2 {
-	animation: backgroundImageAnimation 6s ease-in-out 1s infinite;
+	animation-delay: 1s;
 }
 
 .backgroundAnimation3 {
-	animation: backgroundImageAnimation 6s ease-in-out 2s infinite;
+	animation-delay: 2s;
 }
 
 .backgroundAnimation4 {
-	animation: backgroundImageAnimation 6s ease-in-out 3s infinite;
+	animation-delay: 3s;
 }
 
 .backgroundAnimation5 {
-	animation: backgroundImageAnimation 6s ease-in-out 4s infinite;
+	animation-delay: 4s;
 }
 
 .backgroundAnimation6 {
-	animation: backgroundImageAnimation 6s ease-in-out 5s infinite;
+	animation-delay: 5s;
 }
 
 @keyframes backgroundImageAnimation {
@@ -88,7 +89,7 @@ body {
 	flex-flow: column;
 }
 
-#titleHeading {
+#titleContainer {
 	margin-top: 150px;
 	padding: 0px 10px;
 	border-radius: 7px;
@@ -112,13 +113,12 @@ body {
 	transition: background-color 0.1s;
 }
 
-
 #musicableTitle:hover {
 	background-color: rgba(255, 255, 255, 0.5);
 	cursor: pointer;
 }
 
-.titleButtonContainer {
+#titleButtonContainer {
 	display: flex;
 	width: 100%;
 	height: auto;
@@ -140,7 +140,7 @@ body {
 
 .titleButton h1 {
 	text-align: center;
-	color: rgba(255, 255, 255, 0.9);
+	color: white;
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 	width: auto;
 	margin: 10px;
@@ -148,7 +148,7 @@ body {
 }
 
 .titleButton p {
-	color:rgba(255, 255, 255, 0.75);
+	color: white;
 	margin: 10px;
 	text-align: center;
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -201,7 +201,7 @@ body {
 	background-color: rgba(0, 0, 255, 0.75);
 }
 
-.toolBar {
+#toolBar {
 	display: flex;
 	position:fixed;
 	flex-flow: row nowrap;
@@ -213,7 +213,7 @@ body {
 	border-top: 3px solid yellow;
 }
 
-.toolBarButton {
+#toolBar > div {
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 	color: yellow;
 	border: 3px solid black;
@@ -225,46 +225,40 @@ body {
 	transition-duration: 0.2s;
 }
 
-.toolBarButton:hover {
+#toolBar > div:hover {
 	background-color: rgba(255, 255, 0, 1);
 	color: black;
 	cursor: pointer;
 }
 
-.separator {
-	width: 100%;
-	margin: auto;
-	color: transparent;
-}
-
 #overlayContainer {
 	position: fixed;
 	display: none;
-	justify-content: space-around;
 	width: 100%;
 	height: 100%;
 	z-index: 2;
+	flex-flow: column;
 }
 
-#siteInfoOverlay {
+#overlayContainer > div {
 	display: none;
 	background-color: rgba(0, 0, 0, 0.9);
-	height: min-content;
-	width: 75%;
 	margin: 150px auto auto auto;
 	border: 5px solid yellow;
 	border-radius: 7px;
+	flex-flow: column;
 }
 
-#infoOverlayTitle {
+.overlayTitle {
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 	color: black;
 	width: max-content;
+	height: auto;
 	border: 5px solid black;
 	border-radius: 7px;
 	background-image: linear-gradient(90deg, red, yellow, green, blue, purple);
 	padding: 5px;
-	margin: -30px auto auto auto;
+	margin: 10px auto;
 }
 
 .overlayCloseButton {
@@ -273,27 +267,42 @@ body {
 	color: rgba(255, 255, 0, 0.5);
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 12px;
-	margin-left: auto;
-	margin-right: 10px;
+	margin: auto 15px 10px auto;
+	transition: color 0.2s;
+	font-weight: 900;
 }
 
 .overlayCloseButton:hover {
 	color: rgba(255, 255, 0, 1);
 }
 
-.overlayParagraph {
+#overlayContainer div[id='settingsOverlay'] {
+	background-color: rgba(0, 0, 0, 0.9);
+	height: 500px;
+	width: 300px;
+	margin: 150px 10px 25px auto;
+}
+
+#settingsOverlay > h2 {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: yellow;
+	margin: 10px auto 10px 10px;
+	margin-top: 0px;
+}
+
+#colorThemeIndicatorButton {
+	background-color: black;
+	color: white;
+}
+
+#overlayContainer div[id='infoOverlay'] {
+	width: 700px;
+	height: 375px;
+}
+
+#overlayContainer p {
 	color: rgba(255, 255, 255, 0.75);
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-align: center;
 	margin: 15px;
-}
-
-#siteSettingsOverlay {
-	display: none;
-	background-color: rgba(0, 0, 0, 0.9);
-	height: min-content;
-	width: 25%;
-	margin: 150px 25px 25px auto;
-	border: 5px solid yellow;
-	border-radius: 7px;
 }
