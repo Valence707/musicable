@@ -92,30 +92,36 @@ body {
 #titleContainer {
 	margin-top: 150px;
 	padding: 0px 10px;
-	border-radius: 7px;
-	max-width: min-content;
-	min-width: max-content;
+	border-radius: 14px;
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
+	flex-flow: column;
+	align-content: center;
 	height: 110px;
 	background-image: linear-gradient(90deg,red, yellow, green, blue, purple);
+	border: 5px solid black;
+	align-items: center;
+}
+
+#titleContainer:hover {
+	cursor: pointer;
+}
+
+#titleContainer div {
+	margin-bottom: 10px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.boldTitleText {
+	font-weight: 900;
+	text-decoration: underline;
 }
 
 #musicableTitle {
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
-	border: 5px solid black;
-	border-radius: 7px;
-	margin-top: 10px;
-	height: 70px;
+	margin: auto;
 	padding: 5px;
 	font-size: 60px;
 	transition: background-color 0.1s;
-}
-
-#musicableTitle:hover {
-	background-color: rgba(255, 255, 255, 0.5);
-	cursor: pointer;
 }
 
 #titleButtonContainer {
@@ -216,7 +222,8 @@ body {
 #toolBar > div {
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 	color: yellow;
-	border: 3px solid black;
+	filter: opacity(50%);
+	border: 3px solid transparent;
 	border-radius: 7px;
 	width: auto;
 	margin: auto;
@@ -226,8 +233,7 @@ body {
 }
 
 #toolBar > div:hover {
-	background-color: rgba(255, 255, 0, 1);
-	color: black;
+	filter: opacity(100%);
 	cursor: pointer;
 }
 
@@ -264,16 +270,17 @@ body {
 .overlayCloseButton {
 	cursor: pointer;
 	width: min-content;
-	color: rgba(255, 255, 0, 0.5);
+	color: yellow;
+	filter: opacity(50%);
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 12px;
 	margin: auto 15px 10px auto;
-	transition: color 0.2s;
+	transition: filter 0.2s;
 	font-weight: 900;
 }
 
 .overlayCloseButton:hover {
-	color: rgba(255, 255, 0, 1);
+	filter: opacity(100%);
 }
 
 #overlayContainer div[id='settingsOverlay'] {
@@ -286,13 +293,15 @@ body {
 #settingsOverlay > h2 {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color: yellow;
+	filter: opacity(75%);
+	transition: filter 0.2s;
 	margin: 10px auto 10px 10px;
 	margin-top: 0px;
 }
 
-#colorThemeIndicatorButton {
-	background-color: black;
-	color: white;
+#settingsOverlay > h2:hover {
+	filter: opacity(100%);
+	cursor: pointer;
 }
 
 #overlayContainer div[id='infoOverlay'] {

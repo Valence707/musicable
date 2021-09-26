@@ -29,16 +29,40 @@ function colorThemeChange() {
     documentColorTheme = 'dark';
     document.body.style['background-color'] = 'black';
     document.getElementById('colorThemeIndicatorButton').textContent = 'Dark';
-    document.getElementById('colorThemeIndicatorButton').style.color = 'white';
+    document.getElementById('colorThemeIndicatorButton').style.color = 'yellow';
     document.getElementById('colorThemeIndicatorButton').style['background-color'] = 'black';
     document.getElementById('backgroundDecorationContainer').style.filter = 'invert(0)';
     const titleButtonText = document.getElementById('titleButtonContainer').querySelectorAll('h1,p');
     for (let i = 0; i < titleButtonText.length; i++) {
-      titleButtonText.item(i).style.color = 'white';
+      titleButtonText[i].style.color = 'white';
 
     const titleButtonImages = document.getElementById('titleButtonContainer').querySelectorAll('img');
     for (let i = 0; i < titleButtonImages.length; i++) {
-      titleButtonImages.item(i).style.filter = 'invert(0)';
+      titleButtonImages[i].style.filter = 'invert(0)';
+    }
+
+    document.getElementById('toolBar').style['background-color'] = 'black';
+    document.getElementById('toolBar').style['border-color'] = 'yellow';
+
+    const toolBarText = document.getElementById('toolBar').querySelectorAll('div');
+    for (let i = 0; i < toolBarText.length; i++) {
+      toolBarText[i].style.color = 'yellow';
+    }
+
+    const overlayText = document.getElementById('overlayContainer').querySelectorAll('p');
+    for (let i = 0; i < overlayText.length; i++) {
+      overlayText[i].style.color = 'white';
+    }
+
+    const overlayBodies = document.getElementById('overlayContainer').querySelectorAll('div');
+    for (let i = 0; i < overlayBodies.length; i++) {
+      overlayBodies[i].style['background-color'] = 'black';
+      overlayBodies[i].style['border-color'] = 'yellow';
+    }
+
+    const closeButtons = document.querySelectorAll('h2,h3');
+    for (let i = 0; i < closeButtons.length; i++) {
+      closeButtons[i].style.color = 'yellow';
     }
   }
 }
@@ -54,12 +78,36 @@ function colorThemeChange() {
     document.getElementById('backgroundDecorationContainer').style.filter = 'invert(1)';
     const titleButtonText = document.getElementById('titleButtonContainer').querySelectorAll('h1,p');
     for (let i = 0; i < titleButtonText.length; i++) {
-      titleButtonText.item(i).style.color = 'black';
+      titleButtonText[i].style.color = 'black';
     }
 
     const titleButtonImages = document.getElementById('titleButtonContainer').querySelectorAll('img');
     for (let i = 0; i < titleButtonImages.length; i++) {
       titleButtonImages.item(i).style.filter = 'invert(1)';
+    }
+
+    document.getElementById('toolBar').style['background-color'] = 'white';
+    document.getElementById('toolBar').style['border-color'] = 'blue';
+
+    const toolBarText = document.getElementById('toolBar').querySelectorAll('div');
+    for (let i = 0; i < toolBarText.length; i++) {
+      toolBarText[i].style.color = 'black';
+    }
+
+    const overlayText = document.getElementById('overlayContainer').querySelectorAll('p');
+    for (let i = 0; i < overlayText.length; i++) {
+      overlayText[i].style.color = 'black';
+    }
+
+    const overlayBodies = document.getElementById('overlayContainer').querySelectorAll('div');
+    for (let i = 0; i < overlayBodies.length; i++) {
+      overlayBodies[i].style['background-color'] = 'white';
+      overlayBodies[i].style['border-color'] = 'blue';
+    }
+
+    const closeButtons = document.querySelectorAll('h2,h3');
+    for (let i = 0; i < closeButtons.length; i++) {
+      closeButtons[i].style.color = 'black';
     }
   }
 }
