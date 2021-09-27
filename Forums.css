@@ -1,0 +1,84 @@
+body {
+  background: pink;
+}
+p {
+  color: black;
+}
+h1 {
+  font-weight: bold; 
+}
+.title{
+	justify-content: space-around;
+	text-align: center;
+	margin: auto;
+	padding: auto;
+	display: flex;
+}
+.title > h1{
+	border: 1px solid black;
+	margin: auto;
+	padding: auto;
+	border-bottom:hidden;
+	border-radius: 2px;
+}
+.title >p{
+	border: 1px solid black;
+	margin: auto;
+	padding: auto;
+	border-top: hidden;
+}
+.multiborder{
+    width:220px;
+    height:40px;
+    position:relative;
+    margin:auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.top-border-1{
+    border-top:1px solid black;
+    width:57px;
+    position:absolute;
+    top:0px;
+    right:0px;
+    border-radius: 5px;
+}
+.top-border-2{
+    border-top:1px solid black;
+    width:57px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    border-radius: 5px;
+}
+.multiborder >p{
+	border: 1px solid black;
+	margin: auto;
+	padding: auto;
+	border-top: hidden;
+	position: absolute;
+	border-radius: 5px;
+}
+
+.yes {
+	background-color: pink;
+	justify-content: space-around;
+	display:flex;
+	flex-wrap: nowrap;
+	height: auto;
+	width: auto;
+}
+.yes div:hover{
+	background-color:rgba();
+	opacity: .90;
+}
+.yes div{
+	margin: 10px;
+	padding: 20px;
+	font-size: 30px;
+	background-color: lightblue;
+	border:1px solid black;
+	border-radius: 5px;
+
+}
