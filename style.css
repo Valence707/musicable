@@ -217,6 +217,7 @@ body {
 	height:30px;
 	background-color: black;
 	border-top: 3px solid yellow;
+	z-index: 1;
 }
 
 #toolBar > div {

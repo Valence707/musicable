@@ -5,6 +5,10 @@
     <link rel="shortcut icon" href="sus.png" type="image/png">
   </head>
   <body>
+
+  <link rel="stylesheet" href="Forums.css"> 
+  <script src="Forums.js"></script> 
+
 	<div id="background">
 		<div id="backgroundDecorationContainer">
 			<img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG_double_quarter_note.png">
@@ -27,8 +31,45 @@
 			<img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG_double_quarter_note.png">
 		</div>
 	</div>
-    <link rel="stylesheet" href="Forums.css"> 
-     <script src="myscripts.js"></script> 
+
+  <!-- The toolbar -->
+  <div id="toolBar">
+    <div onclick="location.href='index.html'">&#91;HOME&#93;</div>
+    <hr style='color: transparent; width: 100%;'>
+    <div onclick='infoOverlayOn()'>&#91;?&#93;</div>
+    <div onclick='settingsOverlayOn()'>&#91;SETTINGS&#93;</div>
+  </div>
+
+  <!-- Site Overlays -->
+  <div id='overlayContainer'>
+
+      <!-- Info Overlay -->
+      <div id='infoOverlay'>
+          <h1 class='overlayTitle'>&#91;About Musicable&#93;</h1>
+          <p>
+              Musicable's primary goal is to be a unified platform dedicated to ALL things music.
+              That's right, while other music sites only offer basic music playback and feedback, Musicable creates a framework around which communities
+              can directly listen to, share, and discuss music on a whole new level. Don't believe me?
+              Ok, so I AM a little biased, but you can go see for yourself. <span style="font-weight:900;"><br>Enjoy!</span>
+              <br><br>
+              <span style="filter: opacity(50%); font-size: 10px;">Created by Marcus Secu, Orestes Gonzales, and Josue Delgado.</span>
+              <br><br>
+              <span style="filter: opacity(50%); font-size: 10px;">Contact us: (123) 456-7890</span>
+              <br><br>
+              <span style="filter: opacity(50%); font-size: 10px;">&#169; Copyright Musicable, Inc., 2021, all rights reserved.</span>
+          </p>
+          <h3 class='overlayCloseButton' onclick='overlayOff()'>&#91;close&#93;</h3>
+      </div>
+
+      <!-- Settings Overlay -->
+      <div id='settingsOverlay'>
+          <h1 class='overlayTitle'>&#91;Settings&#93;</h1>
+          <h2 onclick='colorThemeChange()'>&#91;Visual Theme: <span id='colorThemeIndicatorButton'>Dark</span>&#93;</h2>
+          <h3 class='overlayCloseButton' onclick='overlayOff()'>&#91;close&#93;</h3>
+      </div>
+  </div>
+
+
     <div class="title">
     <h1> Forums</h1>
   </div>
