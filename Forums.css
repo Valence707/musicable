@@ -2,14 +2,14 @@ body {
 	background-color: white;
 }
 
-  p {
-	color: black;
-  }
-  h1 {
-	font-weight: bold; 
-  }
+#pageBody p {
+color: black;
+}
+#pageBody h1 {
+font-weight: bold; 
+}
 
-  #background {
+#background {
 	display: flex;
 	position: absolute;
 	width: 95%;
@@ -161,23 +161,29 @@ body {
   
   }
 
-#toolBar {
+.toolBar {
 	display: flex;
 	position:fixed;
 	flex-flow: row nowrap;
-	bottom:0;
-	margin-left:-10px;
-	width:100%;
-	height:30px;
-	background-color: black;
-	border-top: 3px solid yellow;
+	bottom: 15px;
+	align-items: center;
+	left: 0%;
+	right: 0%;
+	margin: 0px auto;
+	width:300px;
+	height:35px;
+	background-color: white;
+	border-style: solid;
+	border-width: 3px;
+	border-color: yellow;
+	border-radius: 9px;
 	z-index: 1;
 }
 
-#toolBar > div {
+.toolBar > div {
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 	color: yellow;
-	filter: opacity(50%);
+	filter: opacity(75%);
 	border: 3px solid transparent;
 	border-radius: 7px;
 	width: auto;
@@ -187,9 +193,14 @@ body {
 	transition-duration: 0.2s;
 }
 
-#toolBar > div:hover {
+.toolBar > div:hover {
 	filter: opacity(100%);
 	cursor: pointer;
+}
+
+.toolBar img {
+	width: 30px;
+	margin-top: -3px;
 }
 
 #overlayContainer {

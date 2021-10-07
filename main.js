@@ -1,5 +1,3 @@
-
-
 function overlayBackgroundOn() {
   document.querySelector('#overlayContainer').style.display = 'block';
 }
@@ -22,44 +20,42 @@ function settingsOverlayOn() {
   overlayBackgroundOn();
   }
 
-
-
 const saveColorTheme = (color) => {
   localStorage.setItem('documentColorTheme', color)
 }
 
 function darkModeColorTheme() {
+  
   // All dark mode theme methods here.
   saveColorTheme('dark');
+  document.querySelector('#musicableTitle').style.color = 'yellow';
   document.body.style['background-color'] = 'black';
-  document.getElementById('colorThemeIndicatorButton').textContent = 'Dark';
-  document.getElementById('colorThemeIndicatorButton').style.color = 'yellow';
-  document.getElementById('colorThemeIndicatorButton').style['background-color'] = 'black';
-  document.getElementById('backgroundDecorationContainer').style.filter = 'invert(0)';
-  const titleButtonText = document.getElementById('titleButtonContainer').querySelectorAll('h1,p');
+  document.querySelector('#colorThemeIndicatorButton').textContent = 'Dark';
+  document.querySelector('#backgroundDecorationContainer').style.filter = 'invert(0)';
+  const titleButtonText = document.querySelector('#titleButtonContainer').querySelectorAll('h1,p');
   for (let i = 0; i < titleButtonText.length; i++) {
     titleButtonText[i].style.color = 'white';
   }
 
-  const titleButtonImages = document.getElementById('titleButtonContainer').querySelectorAll('img');
+  const titleButtonImages = document.querySelector('#titleButtonContainer').querySelectorAll('img');
   for (let i = 0; i < titleButtonImages.length; i++) {
     titleButtonImages[i].style.filter = 'invert(0)';
   }
 
-  document.getElementById('toolBar').style['background-color'] = 'black';
-  document.getElementById('toolBar').style['border-color'] = 'yellow';
+  document.querySelector('#toolBar').style['background-color'] = 'black';
+  document.querySelector('#toolBar').style['border-color'] = 'yellow';
 
-  const toolBarText = document.getElementById('toolBar').querySelectorAll('div');
+  const toolBarText = document.querySelector('.toolBar').querySelectorAll('div');
   for (let i = 0; i < toolBarText.length; i++) {
     toolBarText[i].style.color = 'yellow';
   }
 
-  const overlayText = document.getElementById('overlayContainer').querySelectorAll('p');
+  const overlayText = document.querySelector('#overlayContainer').querySelectorAll('p');
   for (let i = 0; i < overlayText.length; i++) {
     overlayText[i].style.color = 'white';
   }
 
-  const overlayBodies = document.getElementById('overlayContainer').querySelectorAll('div');
+  const overlayBodies = document.querySelector('#overlayContainer').querySelectorAll('div');
   for (let i = 0; i < overlayBodies.length; i++) {
     overlayBodies[i].style['background-color'] = 'black';
     overlayBodies[i].style['border-color'] = 'yellow';
@@ -69,16 +65,17 @@ function darkModeColorTheme() {
   for (let i = 0; i < closeButtons.length; i++) {
     closeButtons[i].style.color = 'yellow';
   }
+
+  document.querySelector("#musicableTitle").style.filter = 'invert(0)';
 }
 
 function lightModeColorTheme() {
 
   // All light mode theme methods here.
   saveColorTheme('light');
+  document.querySelector('#musicableTitle').style.color = 'blue';
   document.body.style['background-color'] = 'white';
   document.querySelector('#colorThemeIndicatorButton').textContent = 'Light';
-  document.querySelector('#colorThemeIndicatorButton').style.color = 'black';
-  document.querySelector('#colorThemeIndicatorButton').style['background-color'] = 'white';
   document.querySelector('#backgroundDecorationContainer').style.filter = 'invert(1)';
   const titleButtonText = document.querySelector('#titleButtonContainer').querySelectorAll('h1,p');
   for (let i = 0; i < titleButtonText.length; i++) {
@@ -93,7 +90,7 @@ function lightModeColorTheme() {
   document.querySelector('#toolBar').style['background-color'] = 'white';
   document.querySelector('#toolBar').style['border-color'] = 'blue';
 
-  const toolBarText = document.querySelector('#toolBar').querySelectorAll('div');
+  const toolBarText = document.querySelector('.toolBar').querySelectorAll('div');
   for (let i = 0; i < toolBarText.length; i++) {
     toolBarText[i].style.color = 'black';
   }
@@ -113,6 +110,8 @@ function lightModeColorTheme() {
   for (let i = 0; i < closeButtons.length; i++) {
     closeButtons[i].style.color = 'black';
   }
+
+  document.querySelector("#musicableTitle").style.filter = 'invert(1)';
 }
 
 document.addEventListener('DOMContentLoaded', function initializeColorTheme() {

@@ -7,27 +7,20 @@ body {
 	background-color: black;
 }
 
-#background {
-	display: flex;
-	position: absolute;
-	width: 95%;
-	height: 90%;
-	z-index: -1;
-	flex-flow: column;
-}
-
 #backgroundDecorationContainer {
 	display: flex;
+	position: fixed;
 	justify-content: space-around;
 	flex-flow: row nowrap;
-	width: 100%;
-	height: 300px;
+	z-index: -1;
+	width: 95%;
+	height: 100%;
 }
 
 .animatedBackgroundImage {
 	filter: opacity(0%);
 	width: 5%;
-	margin: auto -10px auto -10px;
+	margin: auto;
 	opacity: 0.25;
 	animation: backgroundImageAnimation 6s ease-in-out infinite;
 }
@@ -58,7 +51,7 @@ body {
 
 @keyframes backgroundImageAnimation {
 	0% {
-		margin-top:535px;
+		margin-top:90%;
 		filter: opacity(0%);
 		transform: translate(-10px) rotate(5deg);
 	}
@@ -83,55 +76,58 @@ body {
 }
 
 #titleBody {
-	height: 600px;
+	height: 100%;
 	display: flex;
 	align-items: center;
 	flex-flow: column;
 }
 
 #titleContainer {
-	margin-top: 150px;
-	padding: 0px 10px;
-	border-radius: 14px;
 	display: flex;
-	flex-flow: column;
-	align-content: center;
-	height: 110px;
-	background-image: linear-gradient(90deg,red, yellow, green, blue, purple);
-	border: 5px solid black;
-	align-items: center;
+	width: 100%;
+	height: 300px;
+	align-items: left;
 }
 
-#titleContainer:hover {
-	cursor: pointer;
-}
-
-#titleContainer div {
-	margin-bottom: 10px;
-	font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.boldTitleText {
-	font-weight: 900;
-	text-decoration: underline;
+#titleBar {
+	display: flex;
+	flex-flow: space-between;
+	width: 100%;
+	height: 100px;
+	margin-top: 10px;
+	border-radius: 10px;
 }
 
 #musicableTitle {
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 900;
+	color: yellow;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
 	margin: auto;
 	padding: 5px;
 	font-size: 60px;
 	transition: background-color 0.1s;
 }
 
+#musicableTitle img {
+	width: 50px;
+}
+
+#musicableTitle > div {
+	font-size: 12px;
+}
+
 #titleButtonContainer {
+	margin-top: -200px;
 	display: flex;
 	width: 100%;
 	height: auto;
 	justify-content: center;
 }
 
-.titleButton {
+#titleButtonContainer > div {
 	max-width: 300px;
 	display: flex;
 	flex-flow: column;
@@ -144,7 +140,7 @@ body {
 	transition: border, margin, 0.15s;
 }
 
-.titleButton h1 {
+#titleButtonContainer > div h1 {
 	text-align: center;
 	color: white;
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -153,7 +149,7 @@ body {
 	transition: font-size 0.1s;
 }
 
-.titleButton p {
+#titleButtonContainer > div p {
 	color: white;
 	margin: 10px;
 	text-align: center;
@@ -161,22 +157,22 @@ body {
 	font-size: 12px;
 }
 
-.titleButton:hover {
+#titleButtonContainer > div:hover {
 	cursor: pointer;
 }
 
-.titleButton:hover h1 {
+#titleButtonContainer > div:hover h1 {
 	font-size: 32px;
 	color: rgba(255, 255, 255, 1);
 }
 
-.titleButton img {
+#titleButtonContainer > div img {
 	width: 30px;
 	margin: auto;
 	transition: width 0.1s;
 }
 
-.titleButton:hover img {
+#titleButtonContainer > div:hover img {
 	width: 45px;
 }
 
@@ -211,19 +207,25 @@ body {
 	display: flex;
 	position:fixed;
 	flex-flow: row nowrap;
-	bottom:0;
-	margin-left:-10px;
-	width:100%;
-	height:30px;
-	background-color: black;
-	border-top: 3px solid yellow;
+	bottom: 15px;
+	align-items: center;
+	left: 0%;
+	right: 0%;
+	margin: 0px auto;
+	width:300px;
+	height:35px;
+	background-color: white;
+	border-style: solid;
+	border-width: 3px;
+	border-color: yellow;
+	border-radius: 9px;
 	z-index: 1;
 }
 
 #toolBar > div {
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 	color: yellow;
-	filter: opacity(50%);
+	filter: opacity(75%);
 	border: 3px solid transparent;
 	border-radius: 7px;
 	width: auto;
@@ -236,6 +238,11 @@ body {
 #toolBar > div:hover {
 	filter: opacity(100%);
 	cursor: pointer;
+}
+
+#toolBar img {
+	width: 30px;
+	margin-top: -3px;
 }
 
 #overlayContainer {

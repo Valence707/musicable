@@ -11,34 +11,38 @@
 
 	<div id="background">
 		<div id="backgroundDecorationContainer">
-			<img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG_double_quarter_note.png">
-			<img class="backgroundAnimation4 animatedBackgroundImage" src="titleIMG_flag_note.png">
-			<img class="backgroundAnimation2 animatedBackgroundImage" src="titleIMG_quarter_note.png">
-			<img class="backgroundAnimation5 animatedBackgroundImage" src="titleIMG_minim.png">
-			<img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG_semibreve.png">
-			<img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG_semiquaver.png">  
-			<img class="backgroundAnimation4 animatedBackgroundImage" src="titleIMG_minim.png">
-			<img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG_semibreve.png">
-			<img class="backgroundAnimation5 animatedBackgroundImage" src="titleIMG_double_quarter_note.png">
-			<img class="backgroundAnimation2 animatedBackgroundImage" src="titleIMG_semiquaver.png">
-			<img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG_flag_note.png">
-			<img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG_quarter_note.png">
-			<img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG_flag_note.png">
-			<img class="backgroundAnimation4 animatedBackgroundImage" src="titleIMG_quarter_note.png">
-			<img class="backgroundAnimation2 animatedBackgroundImage" src="titleIMG_minim.png">
-			<img class="backgroundAnimation5 animatedBackgroundImage" src="titleIMG_semibreve.png">
-			<img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG_semiquaver.png">
-			<img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG_double_quarter_note.png">
+			<img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG/titleIMG_double_quarter_note.png">
+			<img class="backgroundAnimation4 animatedBackgroundImage" src="titleIMG/titleIMG_flag_note.png">
+			<img class="backgroundAnimation2 animatedBackgroundImage" src="titleIMG/titleIMG_quarter_note.png">
+			<img class="backgroundAnimation5 animatedBackgroundImage" src="titleIMG/titleIMG_minim.png">
+			<img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG/titleIMG_semibreve.png">
+			<img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG/titleIMG_semiquaver.png">  
+			<img class="backgroundAnimation4 animatedBackgroundImage" src="titleIMG/titleIMG_minim.png">
+			<img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG/titleIMG_semibreve.png">
+			<img class="backgroundAnimation5 animatedBackgroundImage" src="titleIMG/titleIMG_double_quarter_note.png">
+			<img class="backgroundAnimation2 animatedBackgroundImage" src="titleIMG/titleIMG_semiquaver.png">
+			<img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG/titleIMG_flag_note.png">
+			<img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG/titleIMG_quarter_note.png">
+			<img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG/titleIMG_flag_note.png">
+			<img class="backgroundAnimation4 animatedBackgroundImage" src="titleIMG/titleIMG_quarter_note.png">
+			<img class="backgroundAnimation2 animatedBackgroundImage" src="titleIMG/titleIMG_minim.png">
+			<img class="backgroundAnimation5 animatedBackgroundImage" src="titleIMG/titleIMG_semibreve.png">
+			<img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG/titleIMG_semiquaver.png">
+			<img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG/titleIMG_double_quarter_note.png">
 		</div>
 	</div>
 
   <!-- The toolbar -->
-  <div id="toolBar">
-    <div onclick="location.href='index.html'">&#91;HOME&#93;</div>
+  <div class="toolBar">
+    <div onclick="location.href='index.html'"><img src='titleIMG/musicableLogo.png'></div>
     <hr style='color: transparent; width: 100%;'>
-    <div onclick='infoOverlayOn()'>&#91;?&#93;</div>
-    <div onclick='settingsOverlayOn()'>&#91;SETTINGS&#93;</div>
-  </div>
+    <div onclick='location.href="https://www.youtube.com"'><img src='titleIMG/musicableHeadphonesToolbarIcon.png'></div>
+    <div onclick='location.href="sharing.html"'><img src='titleIMG/musicableShareToolbarIcon.png'></div>
+    <div onclick='location.href="Forums.html"'><img src='titleIMG/musicableDiscussToolbarIcon.png'></div>
+    <hr style='color: transparent; width: 100%;'>
+    <div onclick='infoOverlayOn()'><img src='titleIMG/MusicableHelpIcon.png'></div>
+    <div onclick='settingsOverlayOn()'><img src='titleIMG/MusicableSettingsIcon.png'></div>
+</div>
 
   <!-- Site Overlays -->
   <div id='overlayContainer'>
@@ -47,10 +51,10 @@
       <div id='infoOverlay'>
           <h1 class='overlayTitle'>&#91;About Musicable&#93;</h1>
           <p>
-              Musicable's primary goal is to be a unified platform dedicated to ALL things music.
-              That's right, while other music sites only offer basic music playback and feedback, Musicable creates a framework around which communities
-              can directly listen to, share, and discuss music on a whole new level. Don't believe me?
-              Ok, so I AM a little biased, but you can go see for yourself. <span style="font-weight:900;"><br>Enjoy!</span>
+            Musicable's primary goal is to be a unified platform dedicated to ALL things music.
+            That's right, while other music sites only offer basic music playback and feedback, Musicable creates a framework around which communities
+            can directly listen to, share, and discuss music with more dynamic (that means interactive) control and functionality. Don't believe me?
+            Ok, so I AM a little biased, but you can go see for yourself. <span style="font-weight:900;"><br>Enjoy!</span>
               <br><br>
               <span style="filter: opacity(50%); font-size: 10px;">Created by Marcus Secu, Orestes Gonzales, and Josue Delgado.</span>
               <br><br>
@@ -69,29 +73,30 @@
       </div>
   </div>
 
-
-    <div class="title">
-    <h1> Forums</h1>
-  </div>
-  <div class="multiborder">
-    <p> Start a conversation about music!</p>
-    <div class="top-border-1"></div>
-    <div class="top-border-2"></div>
-  </div>
-    <div class= "yes">
-    	<div id="1">yes this is empty textyes this is empty textyes this is empty text</div>
-      <div>yes this is empty textyes this is empty textyes this is empty text</div>
-      <div>yes this is empty textyes this is empty textyes this is empty text</div>
-    </div>
-    <div class= "yes">
-      <div>yes this is empty textyes this is empty textyes this is empty text</div>
-      <div>yes this is empty textyes this is empty textyes this is empty text</div>
-      <div>yes this is empty textyes this is empty textyes this is empty text</div>
-    </div>
-    <div class= "yes">
-      <div>yes this is empty textyes this is empty textyes this is empty text</div>
-      <div>yes this is empty textyes this is empty textyes this is empty text</div>
-      <div>yes this is empty textyes this is empty textyes this is empty text</div>
+    <div id='pageBody'>
+      <div class="title">
+        <h1> Forums</h1>
+      </div>
+      <div class="multiborder">
+        <p> Start a conversation about music!</p>
+        <div class="top-border-1"></div>
+        <div class="top-border-2"></div>
+      </div>
+        <div class= "yes">
+          <div id="1">yes this is empty textyes this is empty textyes this is empty text</div>
+          <div>yes this is empty textyes this is empty textyes this is empty text</div>
+          <div>yes this is empty textyes this is empty textyes this is empty text</div>
+        </div>
+        <div class= "yes">
+          <div>yes this is empty textyes this is empty textyes this is empty text</div>
+          <div>yes this is empty textyes this is empty textyes this is empty text</div>
+          <div>yes this is empty textyes this is empty textyes this is empty text</div>
+        </div>
+        <div class= "yes">
+          <div>yes this is empty textyes this is empty textyes this is empty text</div>
+          <div>yes this is empty textyes this is empty textyes this is empty text</div>
+          <div>yes this is empty textyes this is empty textyes this is empty text</div>
+        </div>
     </div>
   </body>
 </html>

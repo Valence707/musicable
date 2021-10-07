@@ -4,7 +4,11 @@ body{
   
 }
 
-h2{
+#pageBody {
+	padding-bottom: 100px;
+}
+
+#pageBody h2{
 text-align: center;
   color: mediumpurple;
   font-family: cursive;
@@ -12,14 +16,14 @@ text-align: center;
 }
 
 
-h3{
+#pageBody h3{
   text-align: center;
   font-size: 20px;
   font-family:cursive;
   color: rgb(148, 112, 219);
 }
 
-h4{
+#pageBody h4{
   
   font-size: 25px;
   font-family:cursive;
@@ -27,34 +31,34 @@ h4{
   margin-left: 20px;
 }
 
-img{
+#pageBody img{
   margin-top:40px;
   margin-left: 76px;
   border-style: inset;
   border-color: mediumpurple;
 }
-p1{
+#pageBody p1{
 color: mediumpurple;
   margin-left: 88px;
 }
-p3{
+#pageBody p3{
   color: mediumpurple;
   margin-left: 84px;
 }
-p4{
+#pageBody p4{
   color: mediumpurple;
   margin-left: 70px;
 }
-p5{
+#pageBody p5{
   color: mediumpurple;
   margin-left: 75px;
 }
-p6{
+#pageBody p6{
   color: mediumpurple;
   margin-left: 75px;
 }
 
-h5{
+#pageBody h5{
   color: mediumpurple;
   margin-top: 150px;
   font-size: 25px;
@@ -62,7 +66,7 @@ h5{
   margin-left: 20px;
 }
 
-p9{
+#pageBody p9{
   
   color: mediumpurple;
   font-size: 20px;
@@ -70,29 +74,34 @@ p9{
   margin-left: 10px;
 
 }
-p10 {
+#pageBody p10 {
   color: #ca3a3a;
   font-size: 20px;
- 
 }
 
-#toolBar {
+.toolBar {
 	display: flex;
 	position:fixed;
 	flex-flow: row nowrap;
-	bottom:0;
-	margin-left:-10px;
-	width:100%;
-	height:30px;
-	background-color: black;
-	border-top: 3px solid yellow;
-  z-index: 1;
+	bottom: 15px;
+	align-items: center;
+	left: 0%;
+	right: 0%;
+	margin: 0px auto;
+	width:300px;
+	height:35px;
+	background-color: white;
+	border-style: solid;
+	border-width: 3px;
+	border-color: yellow;
+	border-radius: 9px;
+	z-index: 1;
 }
 
-#toolBar > div {
+.toolBar > div {
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 	color: yellow;
-	filter: opacity(50%);
+	filter: opacity(75%);
 	border: 3px solid transparent;
 	border-radius: 7px;
 	width: auto;
@@ -102,9 +111,14 @@ p10 {
 	transition-duration: 0.2s;
 }
 
-#toolBar > div:hover {
+.toolBar > div:hover {
 	filter: opacity(100%);
 	cursor: pointer;
+}
+
+.toolBar img {
+	width: 30px;
+	margin-top: -3px;
 }
 
 #overlayContainer {

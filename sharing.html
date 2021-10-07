@@ -7,12 +7,16 @@
   <body>
 
     <!-- The toolbar -->
-    <div id="toolBar">
-      <div onclick="location.href='index.html'">&#91;HOME&#93;</div>
+    <div class="toolBar">
+      <div onclick="location.href='index.html'"><img src='titleIMG/musicableLogo.png'></div>
       <hr style='color: transparent; width: 100%;'>
-      <div onclick='infoOverlayOn()'>&#91;?&#93;</div>
-      <div onclick='settingsOverlayOn()'>&#91;SETTINGS&#93;</div>
-    </div>
+      <div onclick='location.href="https://www.youtube.com"'><img src='titleIMG/musicableHeadphonesToolbarIcon.png'></div>
+      <div onclick='location.href="sharing.html"'><img src='titleIMG/musicableShareToolbarIcon.png'></div>
+      <div onclick='location.href="Forums.html"'><img src='titleIMG/musicableDiscussToolbarIcon.png'></div>
+      <hr style='color: transparent; width: 100%;'>
+      <div onclick='infoOverlayOn()'><img src='titleIMG/MusicableHelpIcon.png'></div>
+      <div onclick='settingsOverlayOn()'><img src='titleIMG/MusicableSettingsIcon.png'></div>
+  </div>
 
     <!-- Site Overlays -->
     <div id='overlayContainer'>
@@ -23,7 +27,7 @@
           <p>
               Musicable's primary goal is to be a unified platform dedicated to ALL things music.
               That's right, while other music sites only offer basic music playback and feedback, Musicable creates a framework around which communities
-              can directly listen to, share, and discuss music on a whole new level. Don't believe me?
+              can directly listen to, share, and discuss music with more dynamic (that means interactive) control and functionality. Don't believe me?
               Ok, so I AM a little biased, but you can go see for yourself. <span style="font-weight:900;"><br>Enjoy!</span>
               <br><br>
               <span style="filter: opacity(50%); font-size: 10px;">Created by Marcus Secu, Orestes Gonzales, and Josue Delgado.</span>
@@ -43,103 +47,100 @@
       </div>
     </div>
 
-    <h2> 
-  Sharing!
-    </h2>
-    
-    <h3>
+    <div id='pageBody'>
+      <h2> 
+        Sharing!
+          </h2>
+          
+          <h3>
+            
+            Here you can share your Playists and Reviews
+            
+            </h3>
+          
+          
+          <h4>
+            
+          Playlists 
+            
+          </h4>
+          
+          <p>
+          <img src="song-cover-1.png" alt="Song ocover undead"
+               height= "90px"
+               width= "90px"/>
+            
+            <img src="sweet-lemonade-cover-2.png" alt="Red bird in yellow water" 
+                 height= "90px"
+                 width= "90px"/>
+            
+            <img src="ASAp-duck-3.jpg" alt="Duckie swimming" 
+                 height= "90px"
+                 width= "90px"/>
+            
+            <img src="Sicario-4.jpg" alt="scary man with guitar" 
+                 height= "90px"
+                 width= "90px"/>
+            
+            <img src="Hyper-world.png" alt="Kid dancing" 
+                 height= "90px"
+                 width= "90px"/>
+            
+          </p>
+          
+          <p1> -Lil Coolaid </p1>
+          
+          <p3> -Bandaid Ripper</p3>
+          
+          <p4> -ASAP Ducky</p4>
+          
+          <p5> -Broken Souls</p5>
+          
+          <p6> -Hyper WRLD</p6>
+         
+          <h5> Reviews </h5>
+          
+          
+          <img src="happy-face-black-background.jpg" alt="white happy face" 
+               height= "30px"
+               width = "50px">
+          
+       <p9> 
+         Anonymous - Very good love the tase of music in this playlist. 
+          </p9> 
+          <p10> 
+            Playlist Reviewed: ASAP Ducky
+          </p10>
+          
+          <br>
+          
+          <img src="sad-face-with-black-background.jpg" alt="White sad Face" 
+               height= "30px"
+               width= "50px"/>
+          
+          <p9>
+         Goat146 - Not my type of music! found it very bland no music taste. 
+          </p9>
+          
+          <p10>
+            Playlist Reviewed: Lil Coolaid
+          </p10> 
+            
       
-      Here you can share your Playists and Reviews
-      
-      </h3>
-    
-    
-    <h4>
-      
-    Playlists 
-      
-    </h4>
-    
-    <p>
-    <img src="song-cover-1.png" alt="Song ocover undead"
-         height= "90px"
-         width= "90px"/>
-      
-      <img src="sweet-lemonade-cover-2.png" alt="Red bird in yellow water" 
-           height= "90px"
-           width= "90px"/>
-      
-      <img src="ASAp-duck-3.jpg" alt="Duckie swimming" 
-           height= "90px"
-           width= "90px"/>
-      
-      <img src="Sicario-4.jpg" alt="scary man with guitar" 
-           height= "90px"
-           width= "90px"/>
-      
-      <img src="Hyper-world.png" alt="Kid dancing" 
-           height= "90px"
-           width= "90px"/>
-      
-    </p>
-    
-    <p1> -Lil Coolaid </p1>
-    
-    <p3> -Bandaid Ripper</p3>
-    
-    <p4> -ASAP Ducky</p4>
-    
-    <p5> -Broken Souls</p5>
-    
-    <p6> -Hyper WRLD</p6>
-   
-    <h5> Reviews </h5>
-    
-    
-    <img src="happy-face-black-background.jpg" alt="white happy face" 
-         height= "30px"
-         width = "50px">
-    
- <p9> 
-   Anonymous - Very good love the tase of music in this playlist. 
-    </p9> 
-    <p10> 
-      Playlist Reviewed: ASAP Ducky
-    </p10>
-    
-    <br>
-    
-    <img src="sad-face-with-black-background.jpg" alt="White sad Face" 
-         height= "30px"
-         width= "50px"/>
-    
-    <p9>
-   Goat146 - Not my type of music! found it very bland no music taste. 
-    </p9>
-    
-    <p10>
-      Playlist Reviewed: Lil Coolaid
-    </p10> 
-      
-
-    <img src="neutral-face.jpg" alt="neutral face"
-         height= "30px"
-         width= "50px"
-         />
-    <p9>
-      
-      Hoop22 - Confused; there are some good and bad songs, overall 5/10 !
-      
-      </p9>
-      
-        <p10> 
-          Playlist Reviewed: Hyper WRLD
-    </p10>
-  
-
-    
-   
-    
+          <img src="neutral-face.jpg" alt="neutral face"
+               height= "30px"
+               width= "50px"
+               />
+          <p9>
+            
+            Hoop22 - Confused; there are some good and bad songs, overall 5/10 !
+            
+            </p9>
+            
+              <p10> 
+                Playlist Reviewed: Hyper WRLD
+          </p10>
+    </div>
     
   </body>
 </html>
