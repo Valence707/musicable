@@ -144,8 +144,10 @@ font-weight: bold;
 	  justify-content: space-around;
 	  display:flex;
 	  flex-wrap: nowrap;
-	  height: auto;
-	  width: auto;
+	  height: 225px;
+	  min-width: 700px;
+	  max-width: 1200px;
+	  margin: auto;
   }
   .yes div:hover{
 	  background-color:rgba();
@@ -158,9 +160,20 @@ font-weight: bold;
 	  background-color: lightblue;
 	  border:1px solid black;
 	  border-radius: 5px;
+	  width: 1000px;
+	
   
   }
+.yes div >h1{
+	font-size: 20px;
 
+}
+.yes div >p{
+	font-size: 25px;
+}
+.yes div >ul{
+	font-size: 10px;
+}
 .toolBar {
 	display: flex;
 	position:fixed;
