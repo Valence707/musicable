@@ -174,7 +174,7 @@ font-weight: bold;
 .yes div >ul{
 	font-size: 10px;
 }
-.toolBar {
+#toolBar {
 	display: flex;
 	position:fixed;
 	flex-flow: row nowrap;
@@ -193,7 +193,7 @@ font-weight: bold;
 	z-index: 1;
 }
 
-.toolBar > div {
+#toolBar > div {
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 	color: yellow;
 	filter: opacity(75%);
@@ -206,12 +206,12 @@ font-weight: bold;
 	transition-duration: 0.2s;
 }
 
-.toolBar > div:hover {
+#toolBar > div:hover {
 	filter: opacity(100%);
 	cursor: pointer;
 }
 
-.toolBar img {
+#toolBar img {
 	width: 30px;
 	margin-top: -3px;
 }
@@ -267,20 +267,6 @@ font-weight: bold;
 	height: 500px;
 	width: 300px;
 	margin: 150px 10px 25px auto;
-}
-
-#settingsOverlay > h2 {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	color: yellow;
-	filter: opacity(75%);
-	transition: filter 0.2s;
-	margin: 10px auto 10px 10px;
-	margin-top: 0px;
-}
-
-#settingsOverlay > h2:hover {
-	filter: opacity(100%);
-	cursor: pointer;
 }
 
 #overlayContainer div[id='infoOverlay'] {
