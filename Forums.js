@@ -8,14 +8,10 @@ function overlayBackgroundOn() {
   
   function infoOverlayOn() {
 	document.querySelector('#infoOverlay').style.display = 'flex';
-	document.querySelector("#settingsOverlay").style['flex-flow'] = 'column';
-	document.querySelector('#settingsOverlay').style.display = 'none';
 	overlayBackgroundOn();
 	}
   
 function settingsOverlayOn() {
-	document.querySelector("#settingsOverlay").style.display = "flex";
-	document.querySelector("#settingsOverlay").style['flex-flow'] = 'column';
 	document.querySelector('#infoOverlay').style.display = 'none';
 	overlayBackgroundOn();
 	}

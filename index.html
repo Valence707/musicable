@@ -3,22 +3,24 @@
     <head>
         <link rel='stylesheet' href='style.css'>
         <script src="main.js"></script>
+        <link rel="shortcut icon" href="titleIMG/musicableLogo.png">
     </head>
     <body>
 
-        
-
         <!-- The toolbar -->
-        <div id="toolBar">
-            <div onclick="location.href='index.html'"><img src='titleIMG/musicableLogo.png'></div>
-            <hr style='color: transparent; width: 100%;'>
-            <div onclick='location.href="https://www.youtube.com"'><img src='titleIMG/musicableHeadphonesToolbarIcon.png'></div>
-            <div onclick='location.href="sharing.html"'><img src='titleIMG/musicableShareToolbarIcon.png'></div>
-            <div onclick='location.href="Forums.html"'><img src='titleIMG/musicableDiscussToolbarIcon.png'></div>
-            <hr style='color: transparent; width: 100%;'>
-            <div onclick='infoOverlayOn()'><img src='titleIMG/MusicableHelpIcon.png'></div>
-            <div onclick='settingsOverlayOn()'><img src='titleIMG/MusicableSettingsIcon.png'></div>
+        <div id='toolBarContainer'>
+            <div id="toolBar">
+                <div onclick="location.href='index.html'"><img class="toolBarUtilityButton" src='titleIMG/musicableLogo.png'></div>
+                <hr style='color: transparent; width: 100%;'>
+                <div onclick='location.href="https://www.youtube.com"'><img src='titleIMG/musicableHeadphonesToolbarIcon.png'></div>
+                <div onclick='location.href="sharing.html"'><img src='titleIMG/musicableShareToolbarIcon.png'></div>
+                <div onclick='location.href="Forums.html"'><img src='titleIMG/musicableDiscussToolbarIcon.png'></div>
+                <hr style='color: transparent; width: 100%;'>
+                <div onclick='infoOverlayOn()'><img class="toolBarUtilityButton" src='titleIMG/MusicableHelpIcon.png'></div>
+                <div onclick='settingsOverlayOn()'><img class="toolBarUtilityButton" src='titleIMG/MusicableSettingsIcon.png'></div>
+            </div>
         </div>
+        
 
         <!-- Site Overlays -->
         <div id='overlayContainer'>

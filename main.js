@@ -32,6 +32,8 @@ function darkModeColorTheme() {
   document.body.style['background-color'] = 'black';
   document.querySelector('#colorThemeIndicatorButton').textContent = 'Dark';
   document.querySelector('#backgroundDecorationContainer').style.filter = 'invert(0)';
+  document.querySelector("#musicableTitle").style.filter = 'invert(0)';
+  
   const titleButtonText = document.querySelector('#titleButtonContainer').querySelectorAll('h1,p');
   for (let i = 0; i < titleButtonText.length; i++) {
     titleButtonText[i].style.color = 'white';
@@ -44,29 +46,14 @@ function darkModeColorTheme() {
 
   document.querySelector('#toolBar').style['background-color'] = 'black';
   document.querySelector('#toolBar').style['border-color'] = 'yellow';
-
-  const toolBarText = document.querySelector('.toolBar').querySelectorAll('div');
-  for (let i = 0; i < toolBarText.length; i++) {
-    toolBarText[i].style.color = 'yellow';
+  const titleBarImages = document.querySelector("#titleBar").querySelectorAll("img");
+  for (let i of titleBarImages) {
+    i.style.filter = "invert(0)";
   }
-
-  const overlayText = document.querySelector('#overlayContainer').querySelectorAll('p');
-  for (let i = 0; i < overlayText.length; i++) {
-    overlayText[i].style.color = 'white';
+  const toolBarUtilityButtons = document.querySelector("#toolBar").querySelectorAll(".toolBarUtilityButton");
+  for (i of toolBarUtilityButtons) {
+    i.style.filter = "invert(0)";
   }
-
-  const overlayBodies = document.querySelector('#overlayContainer').querySelectorAll('div');
-  for (let i = 0; i < overlayBodies.length; i++) {
-    overlayBodies[i].style['background-color'] = 'black';
-    overlayBodies[i].style['border-color'] = 'yellow';
-  }
-
-  const closeButtons = document.querySelectorAll('h2,h3');
-  for (let i = 0; i < closeButtons.length; i++) {
-    closeButtons[i].style.color = 'yellow';
-  }
-
-  document.querySelector("#musicableTitle").style.filter = 'invert(0)';
 }
 
 function lightModeColorTheme() {
@@ -84,34 +71,22 @@ function lightModeColorTheme() {
 
   const titleButtonImages = document.querySelector('#titleButtonContainer').querySelectorAll('img');
   for (let i = 0; i < titleButtonImages.length; i++) {
-    titleButtonImages.item(i).style.filter = 'invert(1)';
+    titleButtonImages[i].style.filter = 'invert(1)';
   }
+  
+  const titleBarImages = document.querySelector("#titleBar").querySelectorAll('img');
+  for (let i of titleBarImages) {
+    i.style.filter = "invert(1)";
+  }
+
+  document.querySelector("#musicableTitle").style.color = 'blue';
 
   document.querySelector('#toolBar').style['background-color'] = 'white';
   document.querySelector('#toolBar').style['border-color'] = 'blue';
-
-  const toolBarText = document.querySelector('.toolBar').querySelectorAll('div');
-  for (let i = 0; i < toolBarText.length; i++) {
-    toolBarText[i].style.color = 'black';
+  const toolBarUtilityButtons = document.querySelector("#toolBar").querySelectorAll(".toolBarUtilityButton");
+  for (i of toolBarUtilityButtons) {
+    i.style.filter = "invert(1)";
   }
-
-  const overlayText = document.querySelector('#overlayContainer').querySelectorAll('p');
-  for (let i = 0; i < overlayText.length; i++) {
-    overlayText[i].style.color = 'black';
-  }
-
-  const overlayBodies = document.querySelector('#overlayContainer').querySelectorAll('div');
-  for (let i = 0; i < overlayBodies.length; i++) {
-    overlayBodies[i].style['background-color'] = 'white';
-    overlayBodies[i].style['border-color'] = 'blue';
-  }
-
-  const closeButtons = document.querySelectorAll('h2,h3');
-  for (let i = 0; i < closeButtons.length; i++) {
-    closeButtons[i].style.color = 'black';
-  }
-
-  document.querySelector("#musicableTitle").style.filter = 'invert(1)';
 }
 
 document.addEventListener('DOMContentLoaded', function initializeColorTheme() {
