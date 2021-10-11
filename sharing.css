@@ -104,7 +104,6 @@ font-size: 12px;
 #toolBar > div:hover {
 	filter: opacity(100%);
 	cursor: pointer;
-	border-left: 3px solid white;
 }
 
 #toolBar img {
