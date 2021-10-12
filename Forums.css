@@ -189,26 +189,15 @@ font-weight: bold;
 #toolBar {
 	display: flex;
 	flex-flow: row nowrap;
-	align-items: center;
 	min-width: 300px;
 	height:35px;
-	background-color: white;
-	border-style: solid;
-	border-width: 3px;
-	border-color: yellow;
-	border-radius: 9px;
+	border: 3px solid yellow;
+	border-radius: 13px;
 	z-index: 1;
 }
 
 #toolBar > div {
-	font-family:Verdana, Geneva, Tahoma, sans-serif;
-	color: yellow;
 	filter: opacity(75%);
-	border: 3px solid transparent;
-	border-radius: 7px;
-	width: auto;
-	margin: auto;
-	padding: 3px;
 	transition-property: background-color color;
 	transition-duration: 0.2s;
 }
@@ -220,7 +209,7 @@ font-weight: bold;
 
 #toolBar img {
 	width: 30px;
-	margin-top: -3px;
+	margin: 2.5px;
 }
 
 #overlayContainer {

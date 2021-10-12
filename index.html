@@ -53,56 +53,80 @@
 
         <!-- The body of the first page, contains the title and buttons -->
         <div id='titleBody'>
-            <div id='titleContainer'>
 
-                <!-- The background of the page contains moving images-->
-                <div id="backgroundDecorationContainer">
-                    <img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG/titleIMG_double_quarter_note.png">
-                    <img class="backgroundAnimation4 animatedBackgroundImage" src="titleIMG/titleIMG_flag_note.png">
-                    <img class="backgroundAnimation2 animatedBackgroundImage" src="titleIMG/titleIMG_quarter_note.png">
-                    <img class="backgroundAnimation5 animatedBackgroundImage" src="titleIMG/titleIMG_minim.png">
-                    <img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG/titleIMG_semibreve.png">
-                    <img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG/titleIMG_semiquaver.png">  
-                    <img class="backgroundAnimation4 animatedBackgroundImage" src="titleIMG/titleIMG_minim.png">
-                    <img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG/titleIMG_semibreve.png">
-                    <img class="backgroundAnimation5 animatedBackgroundImage" src="titleIMG/titleIMG_double_quarter_note.png">
-                    <img class="backgroundAnimation2 animatedBackgroundImage" src="titleIMG/titleIMG_semiquaver.png">
-                    <img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG/titleIMG_flag_note.png">
-                    <img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG/titleIMG_quarter_note.png">
-                    <img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG/titleIMG_flag_note.png">
-                    <img class="backgroundAnimation4 animatedBackgroundImage" src="titleIMG/titleIMG_quarter_note.png">
-                    <img class="backgroundAnimation2 animatedBackgroundImage" src="titleIMG/titleIMG_minim.png">
-                    <img class="backgroundAnimation5 animatedBackgroundImage" src="titleIMG/titleIMG_semibreve.png">
-                    <img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG/titleIMG_semiquaver.png">
-                    <img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG/titleIMG_double_quarter_note.png">
-                </div>
-                <div id='titleBar'>
-                    <img src='titleIMG/musicableLogoReversed.png'>
-                    <div id="musicableTitle">
-                        [MUSICABLE]
-                        <div>
-                            More than just music.
-                        </div>
-                    </div>
-                    <img src='titleIMG/musicableLogo.png'>
-                </div>
+            <!-- The background of the page contains moving images-->
+            <div id="backgroundDecorationContainer">
+                <img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG/titleIMG_double_quarter_note.png">
+                <img class="backgroundAnimation4 animatedBackgroundImage" src="titleIMG/titleIMG_flag_note.png">
+                <img class="backgroundAnimation2 animatedBackgroundImage" src="titleIMG/titleIMG_quarter_note.png">
+                <img class="backgroundAnimation5 animatedBackgroundImage" src="titleIMG/titleIMG_minim.png">
+                <img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG/titleIMG_semibreve.png">
+                <img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG/titleIMG_semiquaver.png">  
+                <img class="backgroundAnimation4 animatedBackgroundImage" src="titleIMG/titleIMG_minim.png">
+                <img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG/titleIMG_semibreve.png">
+                <img class="backgroundAnimation5 animatedBackgroundImage" src="titleIMG/titleIMG_double_quarter_note.png">
+                <img class="backgroundAnimation2 animatedBackgroundImage" src="titleIMG/titleIMG_semiquaver.png">
+                <img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG/titleIMG_flag_note.png">
+                <img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG/titleIMG_quarter_note.png">
+                <img class="backgroundAnimation1 animatedBackgroundImage" src="titleIMG/titleIMG_flag_note.png">
+                <img class="backgroundAnimation4 animatedBackgroundImage" src="titleIMG/titleIMG_quarter_note.png">
+                <img class="backgroundAnimation2 animatedBackgroundImage" src="titleIMG/titleIMG_minim.png">
+                <img class="backgroundAnimation5 animatedBackgroundImage" src="titleIMG/titleIMG_semibreve.png">
+                <img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG/titleIMG_semiquaver.png">
+                <img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG/titleIMG_double_quarter_note.png">
             </div>
-            <hr style="border: 1px solid transparent;">
+            
+            <div id='titleBar'>
+                <img src='titleIMG/musicableLogoReversed.png'>
+                <div id="musicableTitle">
+                    [MUSICABLE]
+                    <div style="font-size: 12px;">
+                        More than just music.
+                    </div>
+                </div>
+                <img src='titleIMG/musicableLogo.png'>
+            </div>
+
             <div id='titleButtonContainer'>
                 <div id="listenButton" onclick="location.href='https://www.youtube.com'">
                     <h1>[LISTEN]</h1>
-                    <img id="listenIMG" src='titleIMG/titleIMG_headphones.png'>
+                    <img src='titleIMG/titleIMG_headphones.png'>
                     <p class='titleButtonParagraph'>Music was made to be listened to. Musicable was made to play it for you.</p>
                 </div>
                 <div id="shareButton" onclick="location.href='sharing.html'">
                     <h1>[SHARE]</h1>
-                    <img id='shareIMG' src='titleIMG/titleIMG_share_icon.png'>
+                    <img src='titleIMG/titleIMG_share_icon.png'>
                     <p class='titleButtonParagraph'>Music was made to be shared. Does Musicable make sharing easy? Of course!</p>
                 </div>
                 <div id="discussButton" onclick="location.href='Forums.html'">
                     <h1>[DISCUSS]</h1>
-                    <img id='discussIMG' src='titleIMG/titleIMG_discuss.png'>
-                    <p class='titleButtonParagraph'>Music was made to be discussed, rated, and reviewed. Enter, the Musicable Forums!</p>
+                    <img src='titleIMG/titleIMG_discuss.png'>
+                    <p class='titleButtonContainer'>Music was made to be discussed, rated, and reviewed. Enter, the Musicable Forums!</p>
+                </div>
+            </div>
+            <div id='musicPlayer'>
+                <div class='uniformSongContainer'>
+                    <img src='musicplayer/songs/Imagine Dragons - Believer/Imagine Dragons - Believer.png'></img>
+                </div>
+                <table id='songPlayer' style="margin: auto;">
+                    <tr>
+                        <th class='playerText'>NOW PLAYING<br> <span id='songTitle'>Imagine Dragons - Believer</span></th>
+                    </tr>
+                    <tr style="height: 75px;">
+                        <th id='audioSource'><audio controls>
+                            <source src="musicplayer/songs/Imagine Dragons - Believer/Imagine Dragons - Believer.mp3" type='audio/mpeg'</audio>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td id='playerControlsContainer'>
+                            <div class='playerText playerControls' id='forwardButton' onclick=changeSong(forward)>|&lt;&lt;</div>
+                            <div class='playerText playerControls' id='backButton' onclick=changeSong(back)>&gt;&gt;|</div>
+                            <div class='playerText playerControls' id='playlistDropDown'>QUEUE</div>
+                        </td>
+                    </tr>
+                </table>
+                <div class='uniformSongContainer socialContainer'>
+
                 </div>
             </div>
         </div>
