@@ -125,8 +125,20 @@
                         </td>
                     </tr>
                 </table>
-                <div class='uniformSongContainer socialContainer'>
-
+                <div id='socialContainer' class='uniformSongContainer'>
+                    <div id='socialControls'>
+                        <div id='heart'><img src="titleIMG/heartIcon.png"></div>
+                        <div id='share'><img src="titleIMG/shareIcon.png"></div>
+                    </div>
+                    <div id='discussionField'>
+                        <div id='commentDisplay'>
+                        </div>
+                        <div id='userCommentField'>
+                            <label for='userComment'></label>
+                            <textarea autofocus id='userComment' name='userComment' placeholder="Type comment here..." onkeypress="submitUserComment(event, this)"></textarea>
+                            <div id='commentButton' onclick="submitUserComment('buttonClick')"><img src="titleIMG/discussPublishIcon.png"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -108,3 +108,20 @@ function colorThemeChange() {
     lightModeColorTheme();
   }
 }
+
+var comments = "";
+
+function submitUserComment(inputType) {
+  if (inputType.key == 'Enter' || inputType == 'buttonClick') {
+    var userComment = document.querySelector("#userComment").value+'<br>';
+    if (userComment != '<br>' && userComment.trim() != '<br>') {
+      comments += "<span id='userCommentNameDisplay'>USER: </span>"+userComment;
+      document.querySelector("#userComment").value = '';
+      document.querySelector("#commentDisplay").innerHTML = comments;
+      inputType.preventDefault();
+    } else {
+      document.querySelector("#userComment").value = '';
+      inputType.preventDefault();
+    }
+  }
+}
