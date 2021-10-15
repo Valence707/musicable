@@ -38,6 +38,11 @@ function overlayBackgroundOn() {
 	for (i of toolBarUtilityButtons) {
 		i.style.filter = "invert(0)";
 	}
+
+	let reviewImages = document.querySelectorAll(".reviewImage");
+	for (let i = 0; i<reviewImages.length; i++) {
+		reviewImages[i].style.filter = 'invert(0)';
+	}
   }
   
   function lightModeColorTheme() {
@@ -54,6 +59,12 @@ function overlayBackgroundOn() {
 	for (i of toolBarUtilityButtons) {
 		i.style.filter = "invert(1)";
 	}
+
+	let reviewImages = document.querySelectorAll(".reviewImage");
+	for (let i = 0; i<reviewImages.length; i++) {
+		reviewImages[i].style.filter = 'invert(1)';
+	}
+	console.log(reviewImages);
   }
   
   document.addEventListener('DOMContentLoaded', function initializeColorTheme() {
