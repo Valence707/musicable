@@ -33,17 +33,16 @@
   </div>
 
   <!-- The toolbar -->
-  <div id='toolBarContainer'>
-    <div id="toolBar">
-        <div onclick="location.href='index.html'"><img class="toolBarUtilityButton" src='titleIMG/musicableLogo.png'></div>
-        <hr style='color: transparent; width: 100%;'>
-        <div onclick='location.href="https://www.youtube.com"'><img src='titleIMG/musicableHeadphonesToolbarIcon.png'></div>
-        <div onclick='location.href="sharing.html"'><img src='titleIMG/musicableShareToolbarIcon.png'></div>
-        <div onclick='location.href="Forums.html"'><img src='titleIMG/musicableDiscussToolbarIcon.png'></div>
-        <hr style='color: transparent; width: 100%;'>
-        <div onclick='infoOverlayOn()'><img class="toolBarUtilityButton" src='titleIMG/MusicableHelpIcon.png'></div>
-    </div>
-  </div>
+  <div class="toolBar">
+    <div onclick="location.href='index.html'"><img src='titleIMG/musicableLogo.png'></div>
+    <hr style='color: transparent; width: 100%;'>
+    <div onclick='location.href="https://www.youtube.com"'><img src='titleIMG/musicableHeadphonesToolbarIcon.png'></div>
+    <div onclick='location.href="sharing.html"'><img src='titleIMG/musicableShareToolbarIcon.png'></div>
+    <div onclick='location.href="Forums.html"'><img src='titleIMG/musicableDiscussToolbarIcon.png'></div>
+    <hr style='color: transparent; width: 100%;'>
+    <div onclick='infoOverlayOn()'><img src='titleIMG/MusicableHelpIcon.png'></div>
+    <div onclick='settingsOverlayOn()'><img src='titleIMG/MusicableSettingsIcon.png'></div>
+</div>
 
   <!-- Site Overlays -->
   <div id='overlayContainer'>
@@ -56,13 +55,20 @@
             That's right, while other music sites only offer basic music playback and feedback, Musicable creates a framework around which communities
             can directly listen to, share, and discuss music with more dynamic (that means interactive) control and functionality. Don't believe me?
             Ok, so I AM a little biased, but you can go see for yourself. <span style="font-weight:900;"><br>Enjoy!</span>
-              <br><br><br>
-              <span style="filter: opacity(50%); font-size: 10px;">Created by Marcus Secu, Orestes Gonzales, and Josue Delgado.</span>
-              <br>
+              <br><br>
+              <span style="filter: opacity(50%); font-size: 10px;">Created by Marcus Secu, Orestes Gonzalez, and Josue Delgado.</span>
+              <br><br>
               <span style="filter: opacity(50%); font-size: 10px;">Contact us: (123) 456-7890</span>
-              <br>
+              <br><br>
               <span style="filter: opacity(50%); font-size: 10px;">&#169; Copyright Musicable, Inc., 2021, all rights reserved.</span>
           </p>
+          <h3 class='overlayCloseButton' onclick='overlayOff()'>&#91;close&#93;</h3>
+      </div>
+
+      <!-- Settings Overlay -->
+      <div id='settingsOverlay'>
+          <h1 class='overlayTitle'>&#91;Settings&#93;</h1>
+          <h2 onclick='colorThemeChange()'>&#91;Visual Theme: <span id='colorThemeIndicatorButton'>Dark</span>&#93;</h2>
           <h3 class='overlayCloseButton' onclick='overlayOff()'>&#91;close&#93;</h3>
       </div>
   </div>
@@ -77,8 +83,8 @@
         <div class="top-border-2"></div>
       </div>
         <div class= "yes">
-          <div id="1"><h1>Yall mess with A$AP Ducky</h1><bl></bl><p>His new album Duck Testing came out yesterday!</p><ui>6 Like 5 Comments</ui></div>
-          <div>yes this is empty textyes this is empty textyes this is empty text</div>
+          <div id="1"><h1>Yall mess with A$AP Ducky</h1><bl></bl><p>His new album Duck Testing came out yesterday!</p><p>6 Like 5 Comments</p></div>
+          <div><h1>I love this new song</h1><bl></bl><p>Did you guys hear this new song by joe biden</p><p>2 Like 1 Comments</p></div>
           <div>yes this is empty textyes this is empty textyes this is empty text</div>
         </div>
         <div class= "yes">
