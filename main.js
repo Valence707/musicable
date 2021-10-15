@@ -1,3 +1,25 @@
+var songs = [
+  [
+    "Imagine Dragons - Believer",
+    0,
+    []
+  ],
+  [
+    "Electric Guest - Troubleman",
+    0,
+    []
+  ],
+  [
+    "The Heavy - Short Change Hero",
+    0,
+    []
+  ] 
+]
+
+var currentSong = 0;
+
+var comments = "";
+
 function overlayBackgroundOn() {
   document.querySelector('#overlayContainer').style.display = 'block';
 }
@@ -89,17 +111,6 @@ function lightModeColorTheme() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function initializeColorTheme() {
-  var colorTheme = localStorage.getItem('documentColorTheme', localStorage.getItem('documentColorTheme'));
-  if (colorTheme == null || colorTheme == undefined) {
-    darkModeColorTheme();
-  } else if (colorTheme == 'light') {
-    lightModeColorTheme();
-  } else if (colorTheme == 'dark') {
-    darkModeColorTheme();
-  }
-});
-
 function colorThemeChange() {
   var colorTheme = localStorage.getItem('documentColorTheme');
   if (colorTheme == 'light') {
@@ -108,8 +119,6 @@ function colorThemeChange() {
     lightModeColorTheme();
   }
 }
-
-var comments = "";
 
 function submitUserComment(inputType) {
   if (inputType.key == 'Enter' || inputType == 'buttonClick') {
@@ -125,3 +134,43 @@ function submitUserComment(inputType) {
     }
   }
 }
+
+function changeSong(element) {
+
+  if (element.id == 'forwardButton' && !((currentSong+1) > songs.length-1)) {
+    try {
+      currentSong += 1;
+      document.querySelector("#songTitle").innerHTML = songs[currentSong][0];
+      document.querySelector("#songSource").pause();
+      document.querySelector("#songSource").setAttribute('src', "musicplayer/songs/"+songs[currentSong][0]+"/"+songs[currentSong][0]+".mp3");
+      document.querySelector("#songSource").load();
+      document.querySelector("#songSource").play();
+      document.querySelector("#songArt").src = "musicplayer/songs/"+songs[currentSong][0]+"/"+songs[currentSong][0]+".png"
+    } catch (TypeError) {
+      console.log("INDEXFAIL");
+    }
+  } else if (element.id == 'backButton' && !(currentSong < 1)) {
+    try {
+      currentSong -= 1;
+      document.querySelector("#songTitle").innerHTML = songs[currentSong][0];
+      document.querySelector("#songSource").pause();
+      document.querySelector("#songSource").setAttribute('src', "musicplayer/songs/"+songs[currentSong][0]+"/"+songs[currentSong][0]+".mp3");
+      document.querySelector("#songSource").load();
+      document.querySelector("#songSource").play();
+      document.querySelector("#songArt").src = "musicplayer/songs/"+songs[currentSong][0]+"/"+songs[currentSong][0]+".png"
+    } catch (TypeError) {
+      console.log("INDEXFAIL");
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function initializeColorTheme() {
+  let colorTheme = localStorage.getItem('documentColorTheme', localStorage.getItem('documentColorTheme'));
+  if (colorTheme == null || colorTheme == undefined) {
+    darkModeColorTheme();
+  } else if (colorTheme == 'light') {
+    lightModeColorTheme();
+  } else if (colorTheme == 'dark') {
+    darkModeColorTheme();
+  }
+});

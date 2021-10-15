@@ -20,7 +20,6 @@
                 <div onclick='settingsOverlayOn()'><img class="toolBarUtilityButton" src='titleIMG/MusicableSettingsIcon.png'></div>
             </div>
         </div>
-        
 
         <!-- Site Overlays -->
         <div id='overlayContainer'>
@@ -75,7 +74,7 @@
                 <img class="backgroundAnimation3 animatedBackgroundImage" src="titleIMG/titleIMG_semiquaver.png">
                 <img class="backgroundAnimation6 animatedBackgroundImage" src="titleIMG/titleIMG_double_quarter_note.png">
             </div>
-            
+
             <div id='titleBar'>
                 <img src='titleIMG/musicableLogoReversed.png'>
                 <div id="musicableTitle">
@@ -106,21 +105,24 @@
             </div>
             <div id='musicPlayer'>
                 <div class='uniformSongContainer'>
-                    <img src='musicplayer/songs/Imagine Dragons - Believer/Imagine Dragons - Believer.png'></img>
+                    <img id='songArt' src='musicplayer/songs/Imagine Dragons - Believer/Imagine Dragons - Believer.png'></img>
                 </div>
                 <table id='songPlayer' style="margin: auto;">
                     <tr>
                         <th class='playerText'>NOW PLAYING<br> <span id='songTitle'>Imagine Dragons - Believer</span></th>
                     </tr>
                     <tr style="height: 75px;">
-                        <th id='audioSource'><audio controls>
-                            <source src="musicplayer/songs/Imagine Dragons - Believer/Imagine Dragons - Believer.mp3" type='audio/mpeg'</audio>
+                        <th id='audioSource'>
+                            <audio id='songSource' controls>
+                                <source src="musicplayer/songs/Imagine Dragons - Believer/Imagine Dragons - Believer.mp3" type='audio/mpeg'>
+                                AUDIO ERROR.
+                            </audio>
                         </th>
                     </tr>
                     <tr>
                         <td id='playerControlsContainer'>
-                            <div class='playerText playerControls' id='forwardButton' onclick=changeSong(forward)>|&lt;&lt;</div>
-                            <div class='playerText playerControls' id='backButton' onclick=changeSong(back)>&gt;&gt;|</div>
+                            <div class='playerText playerControls' id='backButton' onclick=changeSong(this)>|&lt;&lt;</div>
+                            <div class='playerText playerControls' id='forwardButton' onclick=changeSong(this)>&gt;&gt;|</div>
                             <div class='playerText playerControls' id='playlistDropDown'>QUEUE</div>
                         </td>
                     </tr>
@@ -133,11 +135,8 @@
                     <div id='discussionField'>
                         <div id='commentDisplay'>
                         </div>
-                        <div id='userCommentField'>
-                            <label for='userComment'></label>
-                            <textarea autofocus id='userComment' name='userComment' placeholder="Type comment here..." onkeypress="submitUserComment(event, this)"></textarea>
-                            <div id='commentButton' onclick="submitUserComment('buttonClick')"><img src="titleIMG/discussPublishIcon.png"></div>
-                        </div>
+                        <label for='userComment'></label>
+                        <textarea id='userComment' name='userComment' placeholder="Press 'Enter' to submit..." onkeypress="submitUserComment(event, this)"></textarea>
                     </div>
                 </div>
             </div>
@@ -146,7 +145,7 @@
 </html>
 
 <!-- To-Do:
-    > Add a video.
-    > Fix the toolbar.
-    > Fix the JavaScript color theme functions, make them consistent across the different pages.
+    > Give music player localStorage variables that store playing song.
+    > Give songs proprietary comments & likes.
+    > Make "Queue" button work.
 -->

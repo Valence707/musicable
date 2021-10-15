@@ -396,35 +396,22 @@ body {
 	border-top-right-radius: 7px;
 }
 
-#userCommentField {
+#userComment {
 	display: flex;
 	flex-flow: row nowrap;
-	width: 100%;
+	width: 202px;
 	height: 50px;
 	background-color: rgba(0, 0, 0, 0.5);
 	border: 1px solid rgba(255, 255, 0, 0.5);
-	border-bottom-right-radius: 7px;
-}
-
-#commentButton {
-	height: 30px;
-	width: 30px;
-	margin: 3px 0px;
-}
-
-#userCommentName {
-	color: red;
-}
-
-#userComment {
-	background-color: rgba(0, 0, 0, 0);
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	width: 165px;
 	margin-right: 5px;
-	border: none;
 	color: yellow;
 	font-size: 10px;
-	padding: 5px;
+	padding: 2px 5px;
 	overflow-y: scroll;
 	resize: none;
+}
+
+#userComment:focus {
+	background-image: linear-gradient(90deg, rgba(255, 255, 0, 0.2), rgba(255, 255, 0, 0.5));
 }
