@@ -2,6 +2,10 @@ body{
 background-color: #000000;
 }
 
+hr {
+	border: none;
+}
+
 #pageBody {
 	padding-bottom: 100px;
 }

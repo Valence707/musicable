@@ -6,19 +6,23 @@ var songs = [
   ],
   [
     "Electric Guest - Troubleman",
-    0,
+    1,
     []
   ],
   [
     "The Heavy - Short Change Hero",
-    0,
+    2,
     []
-  ] 
+  ]
 ]
 
-var currentSong = 0;
+var currentSongIndex = 0;
 
-var comments = "";
+var comments = songs[currentSongIndex][2];
+
+const setCurrentPlayingSong = () => {
+  localStorage.setItem("currentSongIndex", currentSongIndex);
+}
 
 function overlayBackgroundOn() {
   document.querySelector('#overlayContainer').style.display = 'block';
@@ -120,14 +124,18 @@ function colorThemeChange() {
   }
 }
 
-function submitUserComment(inputType) {
-  if (inputType.key == 'Enter' || inputType == 'buttonClick') {
-    var userComment = document.querySelector("#userComment").value+'<br>';
-    if (userComment != '<br>' && userComment.trim() != '<br>') {
-      comments += "<span id='userCommentNameDisplay'>USER: </span>"+userComment;
+function updateComments(inputType) {
+  if (inputType.key == "Enter") {
+    let userComment = document.querySelector("#userComment").value;
+    if (userComment != '' && userComment.trim() != '') {
+      document.querySelector("#commentDisplay").removeAttribute('readonly');
+      songs[currentSongIndex][2] += "USER: "+userComment+"\n";
       document.querySelector("#userComment").value = '';
-      document.querySelector("#commentDisplay").innerHTML = comments;
+      document.querySelector("#commentDisplay").textContent = songs[currentSongIndex][2];
+      document.querySelector("#commentDisplay").setAttribute('readonly', true);
+      console.log(document.querySelector("#commentDisplay").attributes);
       inputType.preventDefault();
+      
     } else {
       document.querySelector("#userComment").value = '';
       inputType.preventDefault();
@@ -135,42 +143,58 @@ function submitUserComment(inputType) {
   }
 }
 
-function changeSong(element) {
-
-  if (element.id == 'forwardButton' && !((currentSong+1) > songs.length-1)) {
-    try {
-      currentSong += 1;
-      document.querySelector("#songTitle").innerHTML = songs[currentSong][0];
-      document.querySelector("#songSource").pause();
-      document.querySelector("#songSource").setAttribute('src', "musicplayer/songs/"+songs[currentSong][0]+"/"+songs[currentSong][0]+".mp3");
-      document.querySelector("#songSource").load();
-      document.querySelector("#songSource").play();
-      document.querySelector("#songArt").src = "musicplayer/songs/"+songs[currentSong][0]+"/"+songs[currentSong][0]+".png"
-    } catch (TypeError) {
-      console.log("INDEXFAIL");
+function setSong(element) {
+  currentSongIndex = parseInt(currentSongIndex);
+  try {
+    if (element.id == 'forwardButton' && (currentSongIndex+1 < songs.length)) {
+      currentSongIndex += 1;
+      localStorage.setItem('currentSongIndex', currentSongIndex);
+    } else if (element.id == 'backButton' && (currentSongIndex-1 >= 0)) {
+      currentSongIndex -= 1;
+      localStorage.setItem('currentSongIndex', currentSongIndex);
+    } else if (element >= 0 && element < songs.length) {
+      console.log("PAGE LOAD");
+    } else {
+      console.log("FAIL");
+      console.log(element)
     }
-  } else if (element.id == 'backButton' && !(currentSong < 1)) {
-    try {
-      currentSong -= 1;
-      document.querySelector("#songTitle").innerHTML = songs[currentSong][0];
-      document.querySelector("#songSource").pause();
-      document.querySelector("#songSource").setAttribute('src', "musicplayer/songs/"+songs[currentSong][0]+"/"+songs[currentSong][0]+".mp3");
-      document.querySelector("#songSource").load();
-      document.querySelector("#songSource").play();
-      document.querySelector("#songArt").src = "musicplayer/songs/"+songs[currentSong][0]+"/"+songs[currentSong][0]+".png"
-    } catch (TypeError) {
-      console.log("INDEXFAIL");
-    }
+  } catch (TypeError) {
+    console.log("CONTENT LOAD");
   }
+
+  document.querySelector("#commentDisplay").textContent = songs[currentSongIndex][2];
+  document.querySelector("#songTitle").innerHTML = songs[currentSongIndex][0];
+  document.querySelector("#songSource").pause();
+  document.querySelector("#songSource").setAttribute('src', "musicplayer/songs/"+songs[currentSongIndex][0]+"/"+songs[currentSongIndex][0]+".mp3");
+  document.querySelector("#songSource").load();
+  document.querySelector("#songArt").src = "musicplayer/songs/"+songs[currentSongIndex][0]+"/"+songs[currentSongIndex][0]+".png";
+  document.querySelector("#heartCounterDisplay").innerHTML = songs[currentSongIndex][1];
 }
 
 document.addEventListener('DOMContentLoaded', function initializeColorTheme() {
-  let colorTheme = localStorage.getItem('documentColorTheme', localStorage.getItem('documentColorTheme'));
+  let colorTheme = localStorage.getItem('documentColorTheme');
   if (colorTheme == null || colorTheme == undefined) {
     darkModeColorTheme();
   } else if (colorTheme == 'light') {
     lightModeColorTheme();
   } else if (colorTheme == 'dark') {
     darkModeColorTheme();
+  }
+  
+  if (localStorage.getItem('currentSongIndex') != undefined && localStorage.getItem('currentSongIndex') != null) {
+    currentSongIndex = localStorage.getItem('currentSongIndex');
+  } else {
+    localStorage.setItem('currentSongIndex', currentSongIndex);
+  }
+
+  setSong(songs[currentSongIndex][0]);
+
+  for (let n = 0; n < songs.length; n++) {
+    if (localStorage.getItem('song'+n+'Comments') != undefined) {
+      songs[n][2] = localStorage.getItem('song'+n+'Comments');
+    } else {
+
+    }
+
   }
 });
