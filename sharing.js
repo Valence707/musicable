@@ -30,6 +30,7 @@ function overlayBackgroundOn() {
 	// All dark mode theme methods here.
 	saveColorTheme('dark');
 	document.body.style['background-color'] = 'black';
+	document.querySelector('#backgroundDecorationContainer').style.filter = 'invert(0)';
 	document.getElementById('colorThemeIndicatorButton').textContent = 'Dark';
 
 	document.querySelector('#toolBar').style['background-color'] = 'black';
@@ -50,6 +51,7 @@ function overlayBackgroundOn() {
 	// All light mode theme methods here.
 	saveColorTheme('light');
 	document.body.style['background-color'] = 'white';
+	document.querySelector('#backgroundDecorationContainer').style.filter = 'invert(1)';
 	document.querySelector('#colorThemeIndicatorButton').textContent = 'Light';
 
 	document.querySelector('#toolBar').style['background-color'] = 'white';
