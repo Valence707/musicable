@@ -33,15 +33,16 @@
   </div>
 
   <!-- The toolbar -->
-  <div class="toolBar">
-    <div onclick="location.href='index.html'"><img src='titleIMG/musicableLogo.png'></div>
-    <hr style='color: transparent; width: 100%;'>
-    <div onclick='location.href="https://www.youtube.com"'><img src='titleIMG/musicableHeadphonesToolbarIcon.png'></div>
-    <div onclick='location.href="sharing.html"'><img src='titleIMG/musicableShareToolbarIcon.png'></div>
-    <div onclick='location.href="Forums.html"'><img src='titleIMG/musicableDiscussToolbarIcon.png'></div>
-    <hr style='color: transparent; width: 100%;'>
-    <div onclick='infoOverlayOn()'><img src='titleIMG/MusicableHelpIcon.png'></div>
-    <div onclick='settingsOverlayOn()'><img src='titleIMG/MusicableSettingsIcon.png'></div>
+  <div id='toolBarContainer'>
+    <div id="toolBar">
+        <div onclick="location.href='index.html'"><img class="toolBarUtilityButton" src='titleIMG/musicableLogo.png'></div>
+        <hr style='color: transparent; width: 100%;'>
+        <div onclick='location.href="index.html"'><img src='titleIMG/musicableHeadphonesToolbarIcon.png'></div>
+        <div onclick='location.href="sharing.html"'><img src='titleIMG/musicableShareToolbarIcon.png'></div>
+        <div onclick='location.href="Forums.html"'><img src='titleIMG/musicableDiscussToolbarIcon.png'></div>
+        <hr style='color: transparent; width: 100%;'>
+        <div onclick='infoOverlayOn()'><img class="toolBarUtilityButton" src='titleIMG/MusicableHelpIcon.png'></div>
+    </div>
 </div>
 
   <!-- Site Overlays -->
@@ -57,9 +58,9 @@
             Ok, so I AM a little biased, but you can go see for yourself. <span style="font-weight:900;"><br>Enjoy!</span>
               <br><br>
               <span style="filter: opacity(50%); font-size: 10px;">Created by Marcus Secu, Orestes Gonzalez, and Josue Delgado.</span>
-              <br><br>
+              <br>
               <span style="filter: opacity(50%); font-size: 10px;">Contact us: (123) 456-7890</span>
-              <br><br>
+              <br>
               <span style="filter: opacity(50%); font-size: 10px;">&#169; Copyright Musicable, Inc., 2021, all rights reserved.</span>
           </p>
           <h3 class='overlayCloseButton' onclick='overlayOff()'>&#91;close&#93;</h3>
