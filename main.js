@@ -171,6 +171,11 @@ function setSong(element) {
   document.querySelector("#heartCounterDisplay").innerHTML = songs[currentSongIndex][1];
 }
 
+function increaseLikes() {
+  songs[currentSongIndex][1] += 1;
+  document.querySelector("#heartCounterDisplay").innerHTML = songs[currentSongIndex][1];
+}
+
 document.addEventListener('DOMContentLoaded', function initializeColorTheme() {
   let colorTheme = localStorage.getItem('documentColorTheme');
   if (colorTheme == null || colorTheme == undefined) {
